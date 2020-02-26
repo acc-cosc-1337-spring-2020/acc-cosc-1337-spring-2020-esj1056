@@ -1,3 +1,4 @@
+#include "vectors.h"
 /*
 Write a value return function get_max_from_vector with a const reference 
 vector of intsparameter that returns the max value in a vector
@@ -6,6 +7,10 @@ vector of intsparameter that returns the max value in a vector
 @return the max value in the vector
 */
 
+int get_max_from_vector(std::vector<int> integers)
+{
+	return 0;
+}
 
 
 /*
@@ -28,3 +33,4 @@ Example given number 10 returns a vector with elements 2,3,5,7,
 Make sure to use the is_prime function to determine if current 
 number is prime.
 */
+

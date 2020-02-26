@@ -1,3 +1,4 @@
+#include <vector>
 /*
 Write a value return function prototype get_max_from_vector with a 
 const reference vector of ints parameter that returns an int
@@ -6,7 +7,7 @@ const reference vector of ints parameter that returns an int
 @return the max value in the vector
 */
 
-
+int get_max_from_vector(std::vector<int>integers);
 
 
 /*
