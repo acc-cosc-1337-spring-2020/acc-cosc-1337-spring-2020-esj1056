@@ -8,7 +8,7 @@ const reference vector of ints parameter that returns an int
 @return the max value in the vector
 */
 
-//int get_max_from_vector(const vector<int> &integers);
+int get_max_from_vector(const vector<int> &integers);
 
 
 /*
@@ -19,7 +19,7 @@ thatgiven a number returns true if prime or false if not prime
 @return: bool if prime False if not
 */
 
-//bool is_prime(int prime_number);
+bool is_prime(int prime_number);
 
 /*
 Write a a function prototype named vector_of_primes with an integer 
@@ -30,4 +30,4 @@ the number
 @return vector of ints containing prime values up to a value
 */
 
-//vector<int> vector_of_primes(int nums);
+vector<int> vector_of_primes(int nums);

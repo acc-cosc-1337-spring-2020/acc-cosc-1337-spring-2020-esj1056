@@ -7,16 +7,16 @@ vector of intsparameter that returns the max value in a vector
 @return the max value in the vector
 */
 
-/*int get_max_from_vector(const vector<int> &integers)
+int get_max_from_vector(const vector<int> &integers)
 {
 	int max_number = integers[0];
-	for (int i = 0; i < integers.size; ++i) {
+	for (int i = 0; i < integers.size(); ++i) {
 		if (max_number < integers[i]) {
 			max_number = integers[i];
 		}
 	}
 	return max_number;
-}*/
+}
 
 
 
@@ -27,19 +27,19 @@ given a number returns true if prime or false if not prime
 @param number: Any whole number
 @return: bool if prime False if not
 */
-/*bool is_prime(int prime_number)
+bool is_prime(int prime_number)
 {
 	if (prime_number <= 1) {
 		return false;
 	}
 	for (int i = 2; i < prime_number; ++i) {
-		if (prime_number % i == 0);
+		if (prime_number % i == 0) {
 			return false;
+		}
 	}
 
 	return true;
-}*/
-
+}
 
 
 /*
@@ -55,7 +55,7 @@ Make sure to use the is_prime function to determine if current
 number is prime.
 */
 
-/*vector<int> vector_of_primes(int nums)
+vector<int> vector_of_primes(int nums)
 {
 	vector<int> vector_list;
 	for (int i = 0; i < nums; ++i) {
@@ -64,4 +64,4 @@ number is prime.
 		}
 	}
 	return vector_list;
-}*/
+}
