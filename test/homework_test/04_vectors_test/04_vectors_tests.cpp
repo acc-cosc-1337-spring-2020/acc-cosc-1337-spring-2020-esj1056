@@ -21,10 +21,10 @@ TEST_CASE("Testing Get Max From Vector"){
 }
 
 TEST_CASE("Testing Is Prime") {
-	REQUIRE(isprime(2) == true);
-	REQUIRE(isprime(4) == false);
-	REQUIRE(isprime(43) == true);
-	REQUIRE(isprime(44) == false);
+	REQUIRE(is_prime(2) == true);
+	REQUIRE(is_prime(4) == false);
+	REQUIRE(is_prime(43) == true);
+	REQUIRE(is_prime(44) == false);
 }
 
 TEST_CASE("Testing Vector of Primes"){
