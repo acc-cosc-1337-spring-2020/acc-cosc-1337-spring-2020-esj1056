@@ -5,3 +5,10 @@ TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
+TEST_CASE("Test can’t call mark board before start game") {
+
+	TicTacToe game;
+
+	REQUIRE_THROWS_AS(game.mark_board(1), Error);
+
+}
