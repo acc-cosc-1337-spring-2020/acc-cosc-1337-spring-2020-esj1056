@@ -25,7 +25,7 @@ void TicTacToe::mark_board(int position)
 
 void TicTacToe::next_player()
 {
-	if (player = "X") {
+	if (TicTacToe::player = "X") {
 		player = "O";
 	}
 	else {
