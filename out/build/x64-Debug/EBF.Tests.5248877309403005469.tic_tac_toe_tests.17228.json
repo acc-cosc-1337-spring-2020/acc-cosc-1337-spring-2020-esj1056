@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "tic_tac_toe_tests",
+    "Command": "C:/Users/jjose/source/repos/acc-cosc-1337-spring-2020/acc-cosc-1337-spring-2020-esj1056/out/build/x64-Debug/test/homework_test/tic_tac_toe_test/tic_tac_toe_tests.exe",
+    "Arguments": [
+      "-s"
+    ],
+    "WorkingDirectory": "C:/Users/jjose/source/repos/acc-cosc-1337-spring-2020/acc-cosc-1337-spring-2020-esj1056/out/build/x64-Debug/test/homework_test/tic_tac_toe_test",
+    "ProjectFile": "C:/Users/jjose/source/repos/acc-cosc-1337-spring-2020/acc-cosc-1337-spring-2020-esj1056/test/homework_test/tic_tac_toe_test/CMakeLists.txt",
+    "LineNumber": 3,
+    "Environment": {},
+    "ExpectsFailure": false,
+    "PassRegularExpression": null,
+    "FailRegularExpression": null,
+    "TargetName": null,
+    "TimeoutInMs": -1
+  }
+]
