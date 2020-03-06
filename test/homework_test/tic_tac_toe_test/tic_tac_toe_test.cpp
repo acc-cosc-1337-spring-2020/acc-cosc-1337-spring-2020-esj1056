@@ -13,3 +13,44 @@ TEST_CASE("Test can’t call mark board before start game") {
 	REQUIRE_THROWS_AS(game.mark_board(1), Error);
 
 }
+
+TEST_CASE("Test start game accepts only X or O") {
+
+	TicTacToe game;
+	string player = "Q";
+	REQUIRE_THROWS_AS(game.start_game(player), Error);
+
+}
+
+TEST_CASE("Test set first player to X") {
+
+	TicTacToe game;
+	game.start_game("X");
+	REQUIRE(game.get_player() == "X");
+}
+
+TEST_CASE("Test set first player to O") {
+
+	TicTacToe game;
+	game.start_game("O");
+	REQUIRE(game.get_player() == "O");
+}
+
+TEST_CASE("Test start game with X game flow") {
+
+	TicTacToe game;
+	game.start_game("X");
+	REQUIRE(game.get_player() == "X");
+	game.mark_board(4);
+	REQUIRE(game.get_player() == "O");
+}
+
+TEST_CASE("Test start game with O game flow") {
+
+	TicTacToe game;
+	game.start_game("O");
+	REQUIRE(game.get_player() == "O");
+	game.mark_board(2);
+	REQUIRE(game.get_player() == "X");
+
+}
