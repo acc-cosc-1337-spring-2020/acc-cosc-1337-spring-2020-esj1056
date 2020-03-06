@@ -19,4 +19,4 @@ public:
 private:
 	void next_player();
 	string player;
-}
+};

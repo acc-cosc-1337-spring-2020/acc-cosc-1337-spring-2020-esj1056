@@ -19,7 +19,7 @@ int main()
 	std::vector<Rect> rectangle_area{ Rect(4,5), Rect(10,10), Rect(100,10) };
 
 	for (auto re : rectangle_area) {
-		cout << re.get_area() << "\n";
+		cout << re << "\n";
 		total += re.get_area();
 	}
 	cout <<"The sum of the areas of all triangles is: " << total;
