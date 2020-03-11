@@ -18,7 +18,7 @@ int main()
 			cout << a.get_error() << "\n";
 		}
 		do {
-			cout << "Player" << game.get_player() << "Please choose a positon of 1-9: ";
+			cout << "Player " << game.get_player() << ", please choose a positon of 1-9: ";
 			cin >> position;
 			try {
 				game.mark_board(position);
