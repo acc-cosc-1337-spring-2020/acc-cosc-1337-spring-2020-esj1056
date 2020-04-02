@@ -23,6 +23,11 @@ private:
 	bool check_board_full();
 	void clear_board();
 	void next_player();
+	bool check_column_win();
+	bool check_row_win();
+	bool check_diagonal_win();
+	void set_winner();
 	string player;
+	string winner;
 	vector<string> pegs{ 9, " " };
 };
