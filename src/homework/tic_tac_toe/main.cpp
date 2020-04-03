@@ -30,7 +30,7 @@ int main()
 				cout << a.get_error() << "\n";
 			}
 		} while (winner == false);
-		cout << "Player" << winner << "is the winner!";
+		cout << "Player " << game.get_winner << " is the winner!";
 		cout << "Please press Y to begin a new game, or anything else to quit: ";
 		cin >> choice1;
 	} while (choice1 == "Y");
