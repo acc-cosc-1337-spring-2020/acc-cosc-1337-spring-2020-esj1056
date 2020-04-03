@@ -36,6 +36,14 @@ TEST_CASE("Test set first player to O") {
 	REQUIRE(game.get_player() == "O");
 }
 
+TEST_CASE("Mark Position accepts values from  1 to 9 only") {
+	TicTacToe game;
+	game.start_game("X");
+	REQUIRE_THROWS_AS(game.mark_board(0), Error);
+	REQUIRE_THROWS_AS(game.mark_board(10), Error);
+	game.mark_board(5); // Not 100% on how to test this one. I'm sure it's actually stupid simple.
+}
+
 TEST_CASE("Test start game with X game flow") {
 
 	TicTacToe game;
@@ -63,7 +71,23 @@ TEST_CASE("Test game ends when board is full") {
 		game.mark_board(i);
 		REQUIRE(game.game_over() == false);
 	}
-
+	game.mark_board(1);
+	REQUIRE(game.game_over() == false);
+	game.mark_board(2);
+	REQUIRE(game.game_over() == false);
+	game.mark_board(3);
+	REQUIRE(game.game_over() == false);
+	game.mark_board(4);
+	REQUIRE(game.game_over() == false);
+	game.mark_board(5);
+	REQUIRE(game.game_over() == false);
+	game.mark_board(6);
+	REQUIRE(game.game_over() == false);
+	game.mark_board(7);
+	REQUIRE(game.game_over() == false);
+	game.mark_board(8);
+	REQUIRE(game.game_over() == false);
 	game.mark_board(9);
 	REQUIRE(game.game_over() == true);
+	
 }
