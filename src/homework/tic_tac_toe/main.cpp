@@ -4,10 +4,10 @@ using std::cout; using std::cin;
 int main() 
 {
 	string choice1 ("");
-	string choice2 ("");
 	string player ("");
 	int position{ 0 };
 	TicTacToe game;
+	bool winner;
 	do {
 		cout << "Please choose to play as X or O: ";
 		cin >> player;
@@ -22,15 +22,17 @@ int main()
 			cin >> position;
 			try {
 				game.mark_board(position);
-				cout << "Please press Y to mark a position for player 2, or anything else to start a new game: " << "\n";
-				cin >> choice1;
+				game.display_board();
+				game.game_over();
+				winner = game.game_over();
 			}
 			catch(Error a){
 				cout << a.get_error() << "\n";
 			}
-		} while (choice1 == "Y");
+		} while (winner == false);
+		cout << "Player" << winner << "is the winner!";
 		cout << "Please press Y to begin a new game, or anything else to quit: ";
-		cin >> choice2;
-	} while (choice2 == "Y");
+		cin >> choice1;
+	} while (choice1 == "Y");
 	return 0;
 }
