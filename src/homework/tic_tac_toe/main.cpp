@@ -9,14 +9,19 @@ int main()
 	TicTacToe game;
 	bool winner;
 	do {
-		cout << "Please choose to play as X or O: ";
-		cin >> player;
-		try {
-			game.start_game(player);
+		
+		while (!(player == "X" || player == ")"))
+		{
+			try {
+				cout << "Please choose to play as X or O: ";
+				cin >> player;
+				game.start_game(player);
+			}
+			catch (Error a) {
+				cout << a.get_error() << "\n";
+			}
 		}
-		catch (Error a){
-			cout << a.get_error() << "\n";
-		}
+
 		do {
 			cout << "Player " << game.get_player() << ", please choose a positon of 1-9: ";
 			cin >> position;
@@ -30,7 +35,7 @@ int main()
 				cout << a.get_error() << "\n";
 			}
 		} while (winner == false);
-		cout << "Player " << game.get_winner << " is the winner!";
+		cout << "Player " << game.get_winner() << " is the winner!";
 		cout << "Please press Y to begin a new game, or anything else to quit: ";
 		cin >> choice1;
 	} while (choice1 == "Y");
