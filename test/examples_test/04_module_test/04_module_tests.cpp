@@ -1,14 +1,17 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
 #include "bank_account.h"
+#include <memory>
 #include "checking_account.h"
+#include "savings_account.h"
 
+using std::unique_ptr; using std::make_unique;
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
 TEST_CASE("Test BankAccount constructor") {
-	BankAccount account(500);
+	unique_ptr<BankAccount> account = make_unique<SavingsAccount>(90);
 
 	REQUIRE(account.get_balance() == 500);
 

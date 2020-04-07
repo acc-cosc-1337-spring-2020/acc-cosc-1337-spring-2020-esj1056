@@ -3,6 +3,12 @@
 
 //bank_account.cpp
 
+int BankAccount::get_balance()const { 
+	
+	return balance; 
+
+}
+
 void BankAccount::deposit(int amount)
 {
 	if (amount > 0) {

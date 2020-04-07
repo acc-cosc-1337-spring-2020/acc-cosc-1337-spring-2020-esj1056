@@ -18,6 +18,12 @@ int main()
 		cout << act->get_balance() << "\n";
 	}
 
+	BankAccount* act = new CheckingAccount(100);
+	//use it
+
+	delete act;
+	act = nullptr;
+
 	/*BankAccount a;
 	cout << a.get_balance();
 
