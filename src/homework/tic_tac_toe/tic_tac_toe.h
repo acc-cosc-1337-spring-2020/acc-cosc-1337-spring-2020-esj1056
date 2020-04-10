@@ -1,4 +1,6 @@
 //h
+#ifndef TICTACTOE_H
+#define TICTACTOE_H
 #include <string>
 #include <vector>
 #include<iostream>
@@ -18,7 +20,8 @@ public:
 	void start_game(string first_player);
 	void mark_board(int position);
 	string get_player()const { return player; }
-	void display_board() const;
+	//void display_board() const;
+	friend std::ostream& operator<<(std::ostream& out, const TicTacToe& t);
 	string get_winner()const { return winner; }
 private:
 	bool check_board_full();
@@ -32,3 +35,4 @@ private:
 	string winner;
 	vector<string> pegs{ 9, " " };
 };
+#endif //TICTACTOE_H

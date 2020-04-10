@@ -1,5 +1,7 @@
 #include "checking_account.h"
 #include "savings_account.h"
+#include "customer.h"
+#include "atm.h"
 #include <iostream>
 #include <vector>
 #include <memory>
@@ -10,19 +12,25 @@ int main()
 {    // c++ 11
 	unique_ptr<BankAccount> s = make_unique<SavingsAccount>(90);
 	unique_ptr<BankAccount> c = make_unique<CheckingAccount>(100);
-	
-	vector <unique_ptr<BankAccount>> accounts;
+	s->deposit(50);
+	Customer cust;
+	cust.add_account(s);
+	cust.add_account(c);
+
+	ATM atm(cust);
+	cout << atm;
+	/*vector <unique_ptr<BankAccount>> accounts;
 	accounts.push_back(std::move(s));
 	accounts.push_back(std::move(c));
 	for (auto &act : accounts) {
 		cout << act->get_balance() << "\n";
-	}
+	}*/
 
-	BankAccount* act = new CheckingAccount(100);
+	//BankAccount* act = new CheckingAccount(100);
 	//use it
 
-	delete act;
-	act = nullptr;
+	//delete act;
+	//act = nullptr;
 
 	/*BankAccount a;
 	cout << a.get_balance();
