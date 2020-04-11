@@ -27,7 +27,7 @@ int main()
 			cin >> position;
 			try {
 				game.mark_board(position);
-				game.display_board();
+				std::cout << game;
 				game.game_over();
 				winner = game.game_over();
 			}

@@ -1,9 +1,9 @@
 //h
-#ifndef TICTACTOE_H
-#define TICTACTOE_H
 #include <string>
 #include <vector>
 #include<iostream>
+#ifndef ERROR_H
+#define ERROR_H
 using std::string; using std::vector;
 
 class Error {
@@ -13,7 +13,9 @@ public:
 private:
 	string message;
 };
-
+#endif
+#ifndef TICTACTOE_H
+#define TICTACTOE_H
 class TicTacToe {
 public:
 	bool game_over();
@@ -21,8 +23,10 @@ public:
 	void mark_board(int position);
 	string get_player()const { return player; }
 	//void display_board() const;
-	friend std::ostream& operator<<(std::ostream& out, const TicTacToe& t);
 	string get_winner()const { return winner; }
+
+	friend std::ostream& operator<<(std::ostream& out, const TicTacToe& t);
+	friend std::istream& operator>>(std::istream& in, TicTacToe& t);
 private:
 	bool check_board_full();
 	void clear_board();
