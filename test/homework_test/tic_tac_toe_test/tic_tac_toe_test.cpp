@@ -81,7 +81,6 @@ TEST_CASE("Test game ends when board is full") {
 	game.mark_board(8);
 	game.mark_board(9);
 	REQUIRE(game.game_over() == true);
-	
 }
 TEST_CASE("Testing first column win") {
 	TicTacToe board;
@@ -98,6 +97,7 @@ TEST_CASE("Testing first column win") {
 	board.mark_board(7);//X
 	//X wins
 	REQUIRE(board.game_over() == true);
+	REQUIRE(board.get_winner() == "X");
 }
 
 TEST_CASE("Testing second column win") {
@@ -115,6 +115,7 @@ TEST_CASE("Testing second column win") {
 	board.mark_board(8);//X
 	//X wins
 	REQUIRE(board.game_over() == true);
+	REQUIRE(board.get_winner() == "X");
 }
 
 TEST_CASE("Testing third column win") {
@@ -132,6 +133,7 @@ TEST_CASE("Testing third column win") {
 	board.mark_board(9);//X
 	//X wins
 	REQUIRE(board.game_over() == true);
+	REQUIRE(board.get_winner() == "X");
 }
 
 TEST_CASE("Testing first row win") {
@@ -149,6 +151,7 @@ TEST_CASE("Testing first row win") {
 	board.mark_board(3);//X
 	//X wins
 	REQUIRE(board.game_over() == true);
+	REQUIRE(board.get_winner() == "X");
 }
 TEST_CASE("Testing second row win") {
 	TicTacToe board;
@@ -165,6 +168,7 @@ TEST_CASE("Testing second row win") {
 	board.mark_board(6);//X
 	//X wins
 	REQUIRE(board.game_over() == true);
+	REQUIRE(board.get_winner() == "X");
 }
 
 TEST_CASE("Testing third row win") {
@@ -182,6 +186,7 @@ TEST_CASE("Testing third row win") {
 	board.mark_board(9);//X
 	//X wins
 	REQUIRE(board.game_over() == true);
+	REQUIRE(board.get_winner() == "X");
 }
 
 TEST_CASE("Testing diagonal win from top left") {
@@ -199,6 +204,7 @@ TEST_CASE("Testing diagonal win from top left") {
 	board.mark_board(9);//X
 	//X wins
 	REQUIRE(board.game_over() == true);
+	REQUIRE(board.get_winner() == "X");
 }
 
 TEST_CASE("Testing diagonal win from top right") {
@@ -216,6 +222,7 @@ TEST_CASE("Testing diagonal win from top right") {
 	board.mark_board(7);//X
 	//X wins
 	REQUIRE(board.game_over() == true);
+	REQUIRE(board.get_winner() == "X");
 }
 
 TEST_CASE("Testing for a tie") {
@@ -241,4 +248,5 @@ TEST_CASE("Testing for a tie") {
 	board.mark_board(8);//X
 	//Nobody wins
 	REQUIRE(board.game_over() == true);
+	REQUIRE(board.get_winner() == "C");
 }

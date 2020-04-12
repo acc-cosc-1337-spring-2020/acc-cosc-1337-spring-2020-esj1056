@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include<iostream>
+using std::cout; using std::vector; using std::string;
 #ifndef ERROR_H
 #define ERROR_H
 using std::string; using std::vector;
